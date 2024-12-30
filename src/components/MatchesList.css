@@ -1,0 +1,50 @@
+/* src/components/MatchesList.css */
+.matches-list {
+  width: 100%;
+  padding: 20px;
+  background-color: #1e2a47;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center-align the text in the section */
+}
+
+.matches-list h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.match-card {
+  background-color: #2c3e72;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto 15px; /* Center-align the cards */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the content horizontally */
+  text-align: center; /* Center-align the text within match cards */
+}
+
+.match-card:hover {
+  transform: scale(1.02);
+  background-color: #3b4f8a;
+}
+
+.match-date, .match-teams, .match-score, .match-league {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #e1e1e1;
+}
+
+.match-teams {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.match-score {
+  color: #ff5733;
+}
