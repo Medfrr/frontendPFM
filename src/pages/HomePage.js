@@ -14,9 +14,11 @@ function HomePage() {
 
   const getDateString = (date) => date.toISOString().split('T')[0];
 
+
   const today = useMemo(() => getDateString(new Date()), []);
-  const yesterday = useMemo(() => getDateString(new Date(Date.now() - 86400000)), []);
-  const tomorrow = useMemo(() => getDateString(new Date(Date.now() + 86400000)), []);
+  const yesterday = useMemo(() => getDateString(new Date(new Date().setDate(new Date().getDate() - 1))), []);
+  const tomorrow = useMemo(() => getDateString(new Date(new Date().setDate(new Date().getDate() + 1))), []);
+  
 
   const categorizeMatches = useCallback((league) => {
     const filteredMatches = mockMatchesData.filter(
